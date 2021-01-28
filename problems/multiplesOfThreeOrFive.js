@@ -24,8 +24,22 @@
 * Notice that 15 is a multiple of 3 and 5 BUT it is only added ONCE.
 */
 
-function multiplesOfThreeOrFive() {
-
+function multiplesOfThreeOrFive(n) {
+    let multiples =[]
+    for(i =1; i<n; i++){
+        if( i% 3 ===0){
+            multiples.push(i)
+        }
+        else if (i %5 ===0){
+            multiples.push(i)
+        }
+    }
+    let sum =0
+    let addTask =function(el){
+        sum =sum +el
+    }
+ multiples.forEach(addTask)
+ return sum
 }
 
 module.exports = multiplesOfThreeOrFive

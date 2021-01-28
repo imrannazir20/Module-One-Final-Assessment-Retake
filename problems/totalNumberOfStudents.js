@@ -11,8 +11,12 @@
 * returns: 167
 */
 
-function totalNumberOfStudents() {
-
+function totalNumberOfStudents(arr) {
+let sum =0;
+for (let val in arr){
+    sum += arr[val].studentCount
+}
+return sum
 }
 
 module.exports = totalNumberOfStudents
